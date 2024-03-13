@@ -7,12 +7,15 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+import GroupActivities
+
+
 
 struct ContentView: View {
-    // Initialize as blank
 
     var body: some View {
         VStack {
+            Balls()
             Button("Create Ballooon") {
                
             }
@@ -20,10 +23,21 @@ struct ContentView: View {
             .foregroundColor(.white)
             .clipShape(Capsule())
             //Model3D(named: "Scene",bundle:realityKitContentBundle)
-            Balls()
         }
     }
 }
+
+struct MyVolumeActivity: GroupActivity {
+    var metadata: GroupActivityMetadata {
+        var metadata = GroupActivityMetadata()
+        metadata.type = .generic
+        metadata.title = NSLocalizedString("My Volume Session", comment: "Title for My Volume Activity")
+        // Customize metadata as needed
+        return metadata
+    }
+}
+
+
 
 struct Balls: View{
     @State private var scale: Float = 1.0
@@ -38,8 +52,8 @@ var body: some View{
                 mesh: .generateSphere(radius: 0.025),
                 materials: [SimpleMaterial(color: .red, isMetallic: true)]
             )
-            let x = Float.random(in: -0.2...0.2)
-            let y = Float.random(in: -0.2...0.2)
+            let x = Float.random(in: -0.45...0.45)
+            let y = Float.random(in: -0.3...0.3)
             let z = Float.random(in: -0.2...0.2)
             model.position = SIMD3(x,y,z)
             
@@ -50,7 +64,7 @@ var body: some View{
         }
         } update: { content in
             content.entities.forEach { entity in
-                entity.transform.scale = SIMD3<Float>(scale, scale, scale)
+                entity.transform.scale = SIMD3<Float>(scale, scale,scale)
             }
         }
         .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
@@ -74,6 +88,8 @@ var body: some View{
         })
 }
 }
+
+
 
 
 #Preview(windowStyle: .volumetric) {

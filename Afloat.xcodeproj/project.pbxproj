@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5599C66A2B9FCE550041AC1D /* Afloat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Afloat.entitlements; sourceTree = "<group>"; };
 		55D23B3C2B89D5FB00605EF6 /* Afloat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afloat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D23B402B89D5FB00605EF6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		55D23B432B89D5FB00605EF6 /* AfloatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfloatApp.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		55D23B3E2B89D5FB00605EF6 /* Afloat */ = {
 			isa = PBXGroup;
 			children = (
+				5599C66A2B9FCE550041AC1D /* Afloat.entitlements */,
 				55D23B432B89D5FB00605EF6 /* AfloatApp.swift */,
 				55D23B452B89D5FB00605EF6 /* ContentView.swift */,
 				55D23B472B89D5FB00605EF6 /* ImmersiveView.swift */,
@@ -290,10 +292,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Afloat/Afloat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Afloat/Preview Content\"";
-				DEVELOPMENT_TEAM = RB4Q8FPNLM;
+				DEVELOPMENT_TEAM = 7T6H9LAFJF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -316,10 +319,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Afloat/Afloat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Afloat/Preview Content\"";
-				DEVELOPMENT_TEAM = RB4Q8FPNLM;
+				DEVELOPMENT_TEAM = 7T6H9LAFJF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
