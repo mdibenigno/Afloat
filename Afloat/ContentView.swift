@@ -8,20 +8,54 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 import GroupActivities
+import WebKit
+import Contacts
 
 
 
 struct ContentView: View {
 
+    @ObservedObject private var vm = WebViewModel()
+
     var body: some View {
         VStack {
-            Balls()
-            Button("Create Ballooon") {
-               
+            //Balls()
+
+            WebView(viewModel: vm)
+                .clipShape(RoundedRectangle(cornerRadius: 32))
+                .onAppear {
+                    vm.webView.load(URLRequest(url: URL(string: "https://afriend.fly.dev/")!))
+                  }
+            //oldLinkReference "https://lil.software/widgets/selfie.html"
+            Button("+ Add to Contacts") {
+                // Create a mutable object to add to the contact.
+                // Mutable object means an object state that can be modified after created.
+                let contact = CNMutableContact()
+                // Name
+                contact.givenName = "Kyle"
+                // Phone No.
+                contact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberiPhone, value: CNPhoneNumber(stringValue: "12345678"))]
+                // Save the created contact.
+                let store = CNContactStore()
+                let saveRequest = CNSaveRequest()
+                saveRequest.add(contact, toContainerWithIdentifier: nil)
+                do {
+                    try store.execute(saveRequest)
+                } catch {
+                    print("Error occur: \(error)")
+                    // Handle error
+                    // may add a alert...
+                }
             }
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
+            Link("FaceTime New Friend", destination: URL(string: "facetime://4383655577")!)
+                            .buttonStyle(.borderedProminent)
+//            Button("Create Ballooon") {
+//               
+//            }
+//            .background(Color.blue)
+//            .foregroundColor(.white)
+//            .clipShape(Capsule())
+//            
             //Model3D(named: "Scene",bundle:realityKitContentBundle)
         }
     }
@@ -31,7 +65,7 @@ struct MyVolumeActivity: GroupActivity {
     var metadata: GroupActivityMetadata {
         var metadata = GroupActivityMetadata()
         metadata.type = .generic
-        metadata.title = NSLocalizedString("My Volume Session", comment: "Title for My Volume Activity")
+        metadata.title = NSLocalizedString("Balloon R Us", comment: "Let's play with balloons together")
         // Customize metadata as needed
         return metadata
     }

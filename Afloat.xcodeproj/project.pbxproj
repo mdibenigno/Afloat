@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5579776A2BA3FD0F00B4E497 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557977682BA3FD0F00B4E497 /* WebView.swift */; };
+		5579776B2BA3FD0F00B4E497 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557977692BA3FD0F00B4E497 /* WebViewModel.swift */; };
 		55D23B422B89D5FB00605EF6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 55D23B412B89D5FB00605EF6 /* RealityKitContent */; };
 		55D23B442B89D5FB00605EF6 /* AfloatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D23B432B89D5FB00605EF6 /* AfloatApp.swift */; };
 		55D23B462B89D5FB00605EF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D23B452B89D5FB00605EF6 /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		557977682BA3FD0F00B4E497 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		557977692BA3FD0F00B4E497 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		5599C66A2B9FCE550041AC1D /* Afloat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Afloat.entitlements; sourceTree = "<group>"; };
 		55D23B3C2B89D5FB00605EF6 /* Afloat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Afloat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D23B402B89D5FB00605EF6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				5599C66A2B9FCE550041AC1D /* Afloat.entitlements */,
 				55D23B432B89D5FB00605EF6 /* AfloatApp.swift */,
 				55D23B452B89D5FB00605EF6 /* ContentView.swift */,
+				557977682BA3FD0F00B4E497 /* WebView.swift */,
+				557977692BA3FD0F00B4E497 /* WebViewModel.swift */,
 				55D23B472B89D5FB00605EF6 /* ImmersiveView.swift */,
 				55D23B492B89D5FC00605EF6 /* Assets.xcassets */,
 				55D23B4E2B89D5FC00605EF6 /* Info.plist */,
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D23B462B89D5FB00605EF6 /* ContentView.swift in Sources */,
+				5579776A2BA3FD0F00B4E497 /* WebView.swift in Sources */,
 				55D23B442B89D5FB00605EF6 /* AfloatApp.swift in Sources */,
+				5579776B2BA3FD0F00B4E497 /* WebViewModel.swift in Sources */,
 				55D23B482B89D5FB00605EF6 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,8 @@ struct AfloatApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }.windowStyle(.volumetric)
+        }.windowStyle(.plain)
+        .defaultSize(CGSize(width: 600, height: 850))
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
