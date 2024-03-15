@@ -8,14 +8,24 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 import GroupActivities
+import WebKit
 
 
 
 struct ContentView: View {
 
+    @ObservedObject private var vm = WebViewModel()
+
     var body: some View {
         VStack {
             Balls()
+
+            WebView(viewModel: vm)
+                .clipShape(RoundedRectangle(cornerRadius: 32))
+                .onAppear {
+                    vm.webView.load(URLRequest(url: URL(string: "https://lil.software/widgets/selfie.html")!))
+                  }
+
             Button("Create Ballooon") {
                
             }
@@ -31,7 +41,7 @@ struct MyVolumeActivity: GroupActivity {
     var metadata: GroupActivityMetadata {
         var metadata = GroupActivityMetadata()
         metadata.type = .generic
-        metadata.title = NSLocalizedString("My Volume Session", comment: "Title for My Volume Activity")
+        metadata.title = NSLocalizedString("Balloon R Us", comment: "Let's play with balloons together")
         // Customize metadata as needed
         return metadata
     }
